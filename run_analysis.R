@@ -6,6 +6,10 @@ run_analysis<-function(path="./UCI HAR Dataset") {
         # dplyr requaired
         if (sum(grep("dplyr",library()))==0) library(dplyr)
         tbl1<-tbl_df(df1)
+        
+        df2<-read.table("./features.txt",stringsAsFactors = FALSE)
+        names(tbl1) <-df2$V2
+        
         print(tbl1)
         names(tbl1)
 }
