@@ -54,4 +54,5 @@ run_analysis<-function(path="./UCI HAR Dataset") {
         print(tbl4)
         names(tbl4)
         write.csv(tbl4,file="../out_dset2.csv")
+        write.table(tbl4,file="../out_dset2.txt",row.name=FALSE)
 }

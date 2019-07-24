@@ -24,10 +24,12 @@ Processing consists of 9 steps :
 6) Enrichment of tibble tbl3 with activity label based on ./activity_labels.txt file
 7) Reordering columns and writing tbl3 into out_dset1.csv file
 8) Grouping tibble from step 7 and creating new tibble tbl4 
-9) Creating new summary dataset in accordance with assignment requiremets and writing it into out_dset2.csv file
+9) Creating new summary dataset in accordance with assignment requiremets and writing it into out_dset2.csv file and out_dset2.txt file
 
 
 ### Output tidy Datasets
 Script produces two output files in csv format:
 out_dset1.csv
 out_dset2.csv
+and on in txt format :
+out_dset2.txt
