@@ -43,13 +43,15 @@ run_analysis<-function(path="./UCI HAR Dataset") {
                 
         print(tbl3)
         names(tbl3)
+        write.csv(tbl3,file="../out_dset1.csv")
         
         # Create a second, independent tidy data set with the average of each variable for each activity and each subject
+        # Preserve Activity Label in output tbl 
         tbl4<-group_by(tbl3,activity,subject)
         tbl4<-inner_join(summarize_if(tbl4,is.numeric,mean),summarize(tbl4,activity_label=min(activity_label )))
         #ungroup(tbl4)
         
         print(tbl4)
         names(tbl4)
-        
+        write.csv(tbl4,file="../out_dset2.csv")
 }
